@@ -51,7 +51,6 @@ export default {
   height: 300px;
   z-index: 99;
   padding: 5px;
-  left: 450px;
   top: 50px;
   li {
     list-style: none;

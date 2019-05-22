@@ -108,7 +108,6 @@ export default {
   }
   position: absolute;
   top: 45px;
-  left: 360px;
   z-index: 99;
   .box {
     width: 500px;

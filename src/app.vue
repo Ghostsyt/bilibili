@@ -7,6 +7,7 @@
     <!-- 正文部分 -->
     <section class="bili-wrapper">
       <chiefRecommend></chiefRecommend>
+      <popularize></popularize>
     </section>
   </div>
 </template>
@@ -14,12 +15,13 @@
 import biliHeader from "./components/header.vue";
 import navMenu from "./components/nav-menu.vue";
 import chiefRecommend from "./components/chief-recommend.vue";
-
+import popularize from "./components/home_popularize.vue";
 export default {
   components: {
     biliHeader,
     navMenu,
-    chiefRecommend
+    chiefRecommend,
+    popularize
   }
 };
 </script>
