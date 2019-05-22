@@ -23,9 +23,9 @@
       </div>
       <div class="box-r">
         <ul>
-          <li v-for="(item, index) in videoList" :key="item.id">
+          <li v-for="item in videoList" :key="item.id">
             <a href>
-              <img src="../../static/images/face.jpg" alt>
+              <img src="../../static/images/face.jpg" alt={{item.tittle}}>
               <div class="detile">
                 <p>{{item.tittle}}</p>
                 <p>up主：{{item.up}}</p>

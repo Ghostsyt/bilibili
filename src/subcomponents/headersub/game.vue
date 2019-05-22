@@ -29,12 +29,13 @@
               v-for="(item, index) in gameList"
               :key="item.id"
               @mouseover="showGameImg(gameList[index].src)"
+              @mouseout="hideGameImg"
             >{{item.name}}</li>
           </ul>
         </div>
       </div>
       <div class="box-img">
-        <img src="../../../static/images/gameimg1.png" alt>
+        <img src alt>
       </div>
     </div>
   </div>
@@ -90,6 +91,12 @@ export default {
         .getElementsByTagName("img")[0]
         .setAttribute("src", index);
       console.log(index);
+    },
+    hideGameImg() {
+      document
+        .getElementsByClassName("box-img")[0]
+        .getElementsByTagName("img")[0]
+        .setAttribute("src", "");
     }
   }
 };
