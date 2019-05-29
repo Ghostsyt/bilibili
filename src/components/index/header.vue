@@ -17,7 +17,7 @@
                 <a href="#">游戏中心</a>
                 <game v-show="gameFlag"></game>
               </li>
-              <li @mouseover="turnLiveFlag()" @mouseout="turnLiveFlag()">
+              <li class="live" @mouseover="turnLiveFlag()" @mouseout="turnLiveFlag()">
                 <a>直播</a>
                 <live v-show="liveFlag"></live>
               </li>
@@ -33,8 +33,8 @@
               <li>
                 <a href class="downbtn">下载APP</a>
                 <div class="download">
-                  <img src="../../src/images/orcode-frame.png" alt>
-                  <img src="../images/download.png" alt>
+                  <img src="../../../src/images/orcode-frame.png" alt>
+                  <img src="../../images/download.png" alt>
                 </div>
               </li>
             </ul>
@@ -72,8 +72,8 @@
   </div>
 </template>
 <script>
-import game from "../subcomponents/headersub/game.vue";
-import live from "../subcomponents/headersub/live.vue";
+import game from "../../subcomponents/headersub/game.vue";
+import live from "../../subcomponents/headersub/live.vue";
 window.onload = function(params) {
   var oSearchBtn = document.getElementsByClassName("searchicon")[0];
   var oSerchFrom = document.getElementById("serchFrom");
@@ -112,16 +112,19 @@ export default {
 </script>
 <style lang="less" scoped>
 .main-container {
+  .live {
+    position: relative;
+  }
   .header {
     width: 100%;
     height: 180px;
-    background-image: url("../images/3329c9f0abfb925ae30441f24d924ad3c19775df.png");
+    background-image: url("../../images/3329c9f0abfb925ae30441f24d924ad3c19775df.png");
     background-position: center center;
     position: relative;
     .menu {
       height: 50px;
       width: 100%;
-      background-color: hsla(204, 78%, 49%, 0.829);
+      background-color: hsla(212, 35%, 51%, 0.568);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       position: relative;
       li {
@@ -173,12 +176,12 @@ export default {
       height: 75%;
       margin: 0 auto;
       position: absolute;
-      left: 270px;
+      left: 165px;
       top: 50px;
       .logo {
         width: 200px;
-        height: 200px;
-        background-image: url("../images/6592e92861e6248205af17702d06ea3f97d81de6.png");
+        height: 100px;
+        background-image: url("../../images/6592e92861e6248205af17702d06ea3f97d81de6.png");
         background-repeat: no-repeat;
         position: absolute;
         top: 30px;
@@ -193,7 +196,7 @@ export default {
         .searchicon {
           position: absolute;
           font-size: 20px;
-          color: rgb(103, 103, 209);
+          color: rgba(98, 98, 158, 0.199);
           right: 28px;
           top: 15px;
         }

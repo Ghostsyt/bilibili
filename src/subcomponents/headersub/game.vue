@@ -115,13 +115,15 @@ export default {
     clear: both;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    left: -10px;
 
     .box-l {
       width: 60%;
       height: 100%;
       padding: 10px;
       .box-l-t {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       .box-l-b {
         ul {
@@ -129,8 +131,11 @@ export default {
           height: 60px;
           display: flex;
           padding: 0;
+          justify-content: space-between;
         }
         li {
+          height: 100%;
+
           img {
             width: 70px;
             display: inline-block;
@@ -138,7 +143,9 @@ export default {
             text-align: center;
           }
           span {
-            margin-left: 9px;
+            left: -7px;
+            position: relative;
+            top: -15px;
           }
         }
       }

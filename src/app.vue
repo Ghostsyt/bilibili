@@ -5,25 +5,24 @@
     <!-- 导航栏 -->
     <navMenu></navMenu>
     <!-- 正文部分 -->
-    <section class="bili-wrapper">
-      <chiefRecommend></chiefRecommend>
-      <popularize></popularize>
-    </section>
+    <index></index>
+    <!-- 侧边栏 -->
+
+    <section class="bili-wrapper"></section>
+    <div class="placeholder"></div>
   </div>
 </template>
 <script>
-import biliHeader from "./components/header.vue";
-import navMenu from "./components/nav-menu.vue";
-import chiefRecommend from "./components/chief-recommend.vue";
-import popularize from "./components/home_popularize.vue";
+import index from "./components/index/index.vue";
+
 export default {
   components: {
-    biliHeader,
-    navMenu,
-    chiefRecommend,
-    popularize
+    index
   }
 };
 </script>
-<style lang="">
+<style lang="less" scoped>
+.placeholder {
+  height: 4000px;
+}
 </style>

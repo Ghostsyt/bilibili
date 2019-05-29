@@ -46,7 +46,7 @@ module.exports = {
         alias: {
             "vue$": 'vue/dist/vue.js',
             "mui": './src/lib/mui/js/mui.js',
-    
+
         }
     }
 

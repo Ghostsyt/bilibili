@@ -49,9 +49,11 @@ export default {
   background-color: #fff;
   width: 500px;
   height: 300px;
-  z-index: 99;
+  z-index: 9099;
   padding: 5px;
   top: 50px;
+  position: absolute;
+  left: 0px;
   li {
     list-style: none;
   }
@@ -59,6 +61,7 @@ export default {
   .box {
     display: flex;
     justify-content: space-between;
+
     .box-l {
       width: 50%;
       h3 {
