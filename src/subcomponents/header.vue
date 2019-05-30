@@ -33,8 +33,8 @@
               <li>
                 <a href class="downbtn">下载APP</a>
                 <div class="download">
-                  <img src="../../../src/images/orcode-frame.png" alt>
-                  <img src="../../images/download.png" alt>
+                  <img src="../images/orcode-frame.png" alt>
+                  <img src="../images/download.png" alt>
                 </div>
               </li>
             </ul>
@@ -72,8 +72,8 @@
   </div>
 </template>
 <script>
-import game from "../../subcomponents/headersub/game.vue";
-import live from "../../subcomponents/headersub/live.vue";
+import game from "../subcomponents/index/headersub/game.vue";
+import live from "../subcomponents/index/headersub/live.vue";
 window.onload = function(params) {
   var oSearchBtn = document.getElementsByClassName("searchicon")[0];
   var oSerchFrom = document.getElementById("serchFrom");
@@ -118,7 +118,7 @@ export default {
   .header {
     width: 100%;
     height: 180px;
-    background-image: url("../../images/3329c9f0abfb925ae30441f24d924ad3c19775df.png");
+    background-image: url("../images/3329c9f0abfb925ae30441f24d924ad3c19775df.png");
     background-position: center center;
     position: relative;
     .menu {
@@ -181,7 +181,7 @@ export default {
       .logo {
         width: 200px;
         height: 100px;
-        background-image: url("../../images/6592e92861e6248205af17702d06ea3f97d81de6.png");
+        background-image: url("../images/6592e92861e6248205af17702d06ea3f97d81de6.png");
         background-repeat: no-repeat;
         position: absolute;
         top: 30px;

@@ -3,20 +3,20 @@
     <div class="box">
       <div class="box-l">
         <div class="box-l-t">
-          <img src="../../images/game1.jpg" alt>
+          <img src="../../../images/game1.jpg" alt>
         </div>
         <div class="box-l-b">
           <ul>
             <li>
-              <img src="../../images/game2.png" alt>
+              <img src="../../../images/game2.png" alt>
               <span>议案追生</span>
             </li>
             <li>
-              <img src="../../images/game3.png" alt>
+              <img src="../../../images/game3.png" alt>
               <span>碧蓝航线</span>
             </li>
             <li>
-              <img src="../../images/game4.png" alt>
+              <img src="../../../images/game4.png" alt>
               <span>明日方舟</span>
             </li>
           </ul>
@@ -153,7 +153,7 @@ export default {
     .box-r {
       width: 30%;
       margin-right: 30px;
-      background-image: url("../../images/title.png");
+      background-image: url("../../../images/title.png");
       background-repeat: no-repeat;
       background-position-x: 2px;
       background-position-y: 6px;

@@ -1,16 +1,16 @@
 <template>
-  <div class="guochuang-container">
+  <div class="videoFloorM-container">
     <div class="tittle">
       <span></span>
-      <h3>国产原创相关</h3>
+      <h3>短片.手书.配音</h3>
     </div>
     <VideoList></VideoList>
     <paihang></paihang>
   </div>
 </template>
 <script>
-import VideoList from "../../subcomponents/index/guocuang/DonghuaList.vue";
-import paihang from "../../subcomponents/index/guocuang/paihang.vue";
+import VideoList from "../../subcomponents/donghua/video-floor-m/DonghuaList.vue";
+import paihang from "../../subcomponents/donghua/video-floor-m/paihang.vue";
 export default {
   components: {
     VideoList,
@@ -19,16 +19,15 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.guochuang-container {
+.videoFloorM-container {
   width: 1220px;
   display: flex;
   justify-content: flex-start;
   height: 355px;
   margin: 0 auto;
-  margin-bottom: 10px;
-  padding-top: 30px;
-  position: relative;
+  margin-bottom: 50px;
   padding-top: 45px;
+  position: relative;
   .tittle {
     position: absolute;
     display: flex;

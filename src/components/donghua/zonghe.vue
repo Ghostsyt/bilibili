@@ -1,16 +1,16 @@
 <template>
-  <div class="guochuang-container">
+  <div class="zonghe-container">
     <div class="tittle">
       <span></span>
-      <h3>国产原创相关</h3>
+      <h3>综合</h3>
     </div>
     <VideoList></VideoList>
     <paihang></paihang>
   </div>
 </template>
 <script>
-import VideoList from "../../subcomponents/index/guocuang/DonghuaList.vue";
-import paihang from "../../subcomponents/index/guocuang/paihang.vue";
+import VideoList from "../../subcomponents/donghua/zonghe/DonghuaList.vue";
+import paihang from "../../subcomponents/donghua/zonghe/paihang.vue";
 export default {
   components: {
     VideoList,
@@ -19,16 +19,17 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.guochuang-container {
+.zonghe-container {
   width: 1220px;
   display: flex;
   justify-content: flex-start;
   height: 355px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 160px;
   padding-top: 30px;
   position: relative;
   padding-top: 45px;
+
   .tittle {
     position: absolute;
     display: flex;

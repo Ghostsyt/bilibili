@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-import videoListjindu from "../../subcomponents/popularize/videoListjindu.vue";
+import videoListjindu from "../../subcomponents/index/videoList/videoListjindu.vue";
 export default {
   components: {
     videoListjindu

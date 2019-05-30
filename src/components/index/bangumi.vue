@@ -14,8 +14,8 @@
   </div>
 </template>
 <script>
-import fanjuNav from "../../subcomponents/fanju/fanju-nav.vue";
-import fanjuPaihang from "../../subcomponents/fanju/fanju-paihang.vue";
+import fanjuNav from "../../subcomponents/index/fanju/fanju-nav.vue";
+import fanjuPaihang from "../../subcomponents/index/fanju/fanju-paihang.vue";
 export default {
   components: {
     fanjuNav,

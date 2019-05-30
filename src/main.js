@@ -15,6 +15,10 @@ Vue.use(VueRouter)
 /* 1.3导入自己的router.js路由模块 */
 import router from './router.js'
 
+/* 动态修改标题 */
+import VueWechatTitle from 'vue-wechat-title';
+Vue.use(VueWechatTitle)
+
 new Vue({
   el: "#app",
   render(h) {

@@ -32,7 +32,7 @@ export default {
           id: 1,
           up: "大大大灯泡",
           times: "29,5",
-          face: "../../static/images/face.jpg",
+          face: "../../../../static/images/face.jpg",
           tittle: "博士人",
           Times: "1345",
           danmu: "55"
@@ -41,7 +41,7 @@ export default {
           id: 2,
           up: "敖厂长",
           times: "34",
-          face: "../../static/images/face2.jpg",
+          face: "../../../../static/images/face2.jpg",
           tittle: "什么时候才能有女朋友？",
           Times: "1664",
           danmu: "5555"
@@ -50,7 +50,7 @@ export default {
           id: 3,
           up: "10后找人带",
           times: "22",
-          face: "../../static/images/face3.jpg",
+          face: "../../../../static/images/face3.jpg",
           tittle: "套你猴子的",
           Times: "7537567",
           danmu: "5555"
@@ -59,7 +59,7 @@ export default {
           id: 4,
           up: "土味角虫",
           times: "23466",
-          face: "../../static/images/face4.jpg",
+          face: "../../../../static/images/face4.jpg",
           tittle: "苏喂苏喂苏喂",
           Times: "1233",
           danmu: "5555"
@@ -68,7 +68,7 @@ export default {
           id: 5,
           up: "余小C真的很强",
           times: "333",
-          face: "../../static/images/face5.jpg",
+          face: "../../../../static/images/face5.jpg",
           tittle: "王者之拉！",
           Times: "63737",
           danmu: "5555"
@@ -77,7 +77,7 @@ export default {
           id: 6,
           up: "药水哥就是刘波",
           times: "333",
-          face: "../../static/images/face6.jpg",
+          face: "../../../../static/images/face6.jpg",
           tittle: "西蜀霸王！！",
           Times: "141657",
           danmu: "5555"
@@ -86,7 +86,7 @@ export default {
           id: 7,
           up: "药水哥就是刘波",
           times: "333",
-          face: "../../static/images/face7.jpg",
+          face: "../../../../static/images/face7.jpg",
           tittle: "西蜀霸王！！",
           Times: "15152",
           danmu: "5555"
@@ -95,7 +95,7 @@ export default {
           id: 8,
           up: "药水哥就是刘波",
           times: "333",
-          face: "../../static/images/face7.jpg",
+          face: "../../../../static/images/face7.jpg",
           tittle: "西蜀霸王！！",
           Times: "1233",
           danmu: "5555"
@@ -104,7 +104,7 @@ export default {
           id: 9,
           up: "药水哥就是刘波",
           times: "333",
-          face: "../../static/images/face7.jpg",
+          face: "../../../../static/images/face7.jpg",
           tittle: "西蜀霸王！！",
           Times: "1233",
           danmu: "5555"
@@ -113,11 +113,57 @@ export default {
           id: 10,
           up: "药水哥就是刘波",
           times: "333",
-          face: "../../static/images/face7.jpg",
+          face: "../../../../static/images/face7.jpg",
           tittle: "西蜀霸王！！",
           Times: "1233",
           danmu: "5555"
-        }
+        },
+        {
+          id: 11,
+          up: "药水哥就是刘波",
+          times: "333",
+          face: "../../../../static/images/face7.jpg",
+          tittle: "西蜀霸王！！",
+          Times: "1233",
+          danmu: "5555"
+        },
+        {
+          id: 12,
+          up: "药水哥就是刘波",
+          times: "333",
+          face: "../../../../static/images/face7.jpg",
+          tittle: "西蜀霸王！！",
+          Times: "1233",
+          danmu: "5555"
+        },
+        {
+          id: 13,
+          up: "药水哥就是刘波",
+          times: "333",
+          face: "../../../../static/images/face7.jpg",
+          tittle: "西蜀霸王！！",
+          Times: "1233",
+          danmu: "5555"
+        },
+        {
+          id: 14,
+          up: "药水哥就是刘波",
+          times: "333",
+          face: "../../../../static/images/face7.jpg",
+          tittle: "西蜀霸王！！",
+          Times: "1233",
+          danmu: "5555"
+        },
+         {
+          id: 15,
+          up: "药水哥就是刘波",
+          times: "333",
+          face: "../../../../static/images/face7.jpg",
+          tittle: "西蜀霸王！！",
+          Times: "1233",
+          danmu: "5555"
+        },
+     
       ],
       Detile: [],
       width: 0
@@ -148,7 +194,6 @@ export default {
       this.width = e.clientX - oli[index].offsetLeft - (winodwWinth - 1220) / 2;
     }
   },
-  computed: {},
   components: {}
   //   mounted() {
   //     var oDetile = document.getElementsByClassName("propu-detile");

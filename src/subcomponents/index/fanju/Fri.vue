@@ -20,39 +20,38 @@ export default {
           id: 1,
           tittle: "博人传 火影忍者新时代",
           number: "8",
-          img: "../../../static/images/fanju.png"
+          img: "../../../../static/images/fanju.png"
         },
         {
           id: 2,
           tittle: "博人传 火影忍者新时代",
           number: "8",
-          img: "../../../static/images/fanju.png"
+          img: "../../../../static/images/fanju.png"
         },
         {
           id: 3,
           tittle: "博人传 火影忍者新时代",
           number: "8",
-          img: "../../../static/images/fanju.png"
+          img: "../../../../static/images/fanju.png"
         },
         {
           id: 4,
           tittle: "博人传 火影忍者新时代",
           number: "8",
-          img: "../../../static/images/fanju.png"
+          img: "../../../../static/images/fanju.png"
         },
         {
           id: 5,
           tittle: "博人传 火影忍者新时代",
           number: "8",
-          img: "../../../static/images/fanju.png"
+          img: "../../../../static/images/fanju.png"
         },
         {
           id: 6,
           tittle: "博人传 火影忍者新时代",
           number: "8",
-          img: "../../../static/images/fanju.png"
-        },
-    
+          img: "../../../../static/images/fanju.png"
+        }
       ]
     };
   }

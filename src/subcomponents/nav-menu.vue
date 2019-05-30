@@ -2,18 +2,22 @@
   <div class="nav-container">
     <ul class="nav-left">
       <li class="nav-left-home">
-        <a href>
+        <router-link to="/">
           <p>
             <span class="fa fa-home"></span>
             <span>首页</span>
           </p>
-        </a>
+        </router-link>
       </li>
       <li v-for="(item, index) in navList" :key="item.id" class="nav-left-normal">
         <a>
           <div @mouseenter="showDetile(index)" @mouseleave="hideDetile(index)">
             <p>{{item.number}}</p>
-            <router-link to tag="p" >{{item.name}}</router-link>
+            <router-link
+              v-wechat-title="$route.meta.title"
+              :to="{ path: item.href }"
+              tag="p"
+            >{{item.name}}</router-link>
             <div class="nav-left-normal-detile" v-if="showdetile==index">
               <ul>
                 <li v-for="item in navList[index].detile" :key="item.id">
@@ -89,6 +93,7 @@ export default {
           id: 2,
           name: "番剧",
           number: "999+",
+          href: "/fanju",
           detile: [
             "连载动画",
             "完结动画",
@@ -294,6 +299,7 @@ export default {
           color: pink;
           position: absolute;
           font-size: 25px;
+          top: -5px;
         }
       }
     }
@@ -374,7 +380,7 @@ export default {
               transform: translateX(10px);
               transition: 0.2s all ease;
               > span:nth-of-type(2) {
-                transform: translateX(-140px;);
+                transform: translateX(-140px);
                 transition: 0.2s all ease;
               }
             }

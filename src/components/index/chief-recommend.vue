@@ -26,7 +26,7 @@
   </div>
 </template>
 <script>
-import videoList from "../../subcomponents/recommend/videoListUp.vue";
+import videoList from "../../subcomponents/index/recommend/videoListUp.vue";
 export default {
   data() {
     return {
@@ -97,9 +97,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .chiefRecommend-container {
-  .tittle {
-    padding-left: 300px;
-  }
+  
   .box {
     width: 1220px;
     height: 220px;

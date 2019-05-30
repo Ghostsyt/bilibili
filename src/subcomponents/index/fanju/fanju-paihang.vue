@@ -13,7 +13,7 @@
           </a>
           <div class="detile" v-if="DetileFlag==index">
             <div class="detile-top">
-              <img src="../../../static/images/timg.jpg" alt>
+              <img src="../../../../static/images/timg.jpg" alt>
               <p>
                 <span>{{item.name}}</span>
                 <span>更新至第{{item.number}}话</span>

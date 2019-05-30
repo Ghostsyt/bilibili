@@ -5,9 +5,14 @@
         <li @click.prevent="jumpTo(item.toID)" v-for="(item, index) in navList" :key="index">
           <a href>{{item.name}}</a>
         </li>
+        <li class="Totop" @click="jumpTo('biliHeader')">
+          <span class="fa fa-angle-up"></span>
+          <span></span>
+          <span></span>
+        </li>
       </ul>
     </div>
-    <biliHeader></biliHeader>
+    <biliHeader id="biliHeader"></biliHeader>
     <navMenu></navMenu>
     <chiefRecommend id="chiefRecommend"></chiefRecommend>
     <popularize id="popularize"></popularize>
@@ -16,11 +21,12 @@
     <adveritseTwo></adveritseTwo>
     <bangumi id="bangumi"></bangumi>
     <guochuang id="guochuang"></guochuang>
+    <music></music>
   </div>
 </template>
 <script>
-import biliHeader from "./header.vue";
-import navMenu from "./nav-menu.vue";
+import biliHeader from "../../subcomponents/header.vue";
+import navMenu from "../../subcomponents/nav-menu.vue";
 import chiefRecommend from "./chief-recommend.vue";
 import popularize from "./popularize.vue";
 import adveritseOne from "./advertiseOne.vue";
@@ -28,6 +34,7 @@ import adveritseTwo from "./advertiseTwo.vue";
 import Donghua from "./donghua.vue";
 import bangumi from "./bangumi.vue";
 import guochuang from "./guochuang.vue";
+import music from "./music.vue";
 
 export default {
   components: {
@@ -39,7 +46,8 @@ export default {
     Donghua,
     adveritseTwo,
     bangumi,
-    guochuang
+    guochuang,
+    music
   },
   data() {
     return {
@@ -108,8 +116,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .nav-nav-right {
-  width: 40px;
-  height: 1000px;
+  width: 60px;
+
   background-color: rgb(230, 217, 219);
   border: 1px solid rgb(168, 153, 153);
   position: fixed;
@@ -120,12 +128,42 @@ export default {
     padding: 0;
     margin: 0;
     height: 100%;
+    position: relative;
     li {
       list-style: none;
-      height: 3%;
+      height: 5%;
       text-align: center;
       line-height: 30px;
       font-size: 12px;
+    }
+    .Totop {
+      width: 100%;
+      height: 50px;
+      font-size: 40px;
+      line-height: 50px;
+      position: absolute;
+      background-color: rgba(73, 73, 199, 0.432);
+      border-radius: 5px;
+      bottom: -65px;
+
+      span:nth-of-type(2) {
+        position: absolute;
+        width: 1px;
+        height: 15px;
+        background-color: black;
+        display: block;
+        left: 13px;
+        top: -14px;
+      }
+      span:nth-of-type(3) {
+        position: absolute;
+        width: 1px;
+        height: 14px;
+        background-color: black;
+        display: block;
+        right: 15px;
+        top: -14px;
+      }
     }
     a:hover {
       text-decoration: none;

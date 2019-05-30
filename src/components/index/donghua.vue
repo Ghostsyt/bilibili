@@ -11,8 +11,8 @@
   </div>
 </template>
 <script>
-import DonghuaList from "../../subcomponents/videoList/DonghuaList.vue";
-import paihang from "../../subcomponents/paihang/paihang.vue";
+import DonghuaList from "../../subcomponents/index/videoList/DonghuaList.vue";
+import paihang from "../../subcomponents/index/paihang/paihang.vue";
 export default {
   data() {
     return {

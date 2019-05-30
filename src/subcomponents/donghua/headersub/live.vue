@@ -6,7 +6,7 @@
         <ul>
           <li v-for="(item, index) in liveList" :key="item.id">
             <a href>
-              <img src="../../images/timg.jpg" alt>
+              <img src="../../../images/timg.jpg" alt>
               <span>{{item.name}}</span>
             </a>
           </li>
@@ -16,12 +16,12 @@
         <h3>热门活动</h3>
         <div>
           <a href>
-            <img src="../../images/live1.jpg" alt>
+            <img src="../../../images/live1.jpg" alt>
           </a>
         </div>
         <div>
           <a href>
-            <img src="../../images/live2.png" alt>
+            <img src="../../../images/live2.png" alt>
           </a>
         </div>
       </div>
