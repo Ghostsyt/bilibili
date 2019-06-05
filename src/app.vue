@@ -8,17 +8,13 @@
     <router-view></router-view>
 
     <!-- 侧边栏 -->
+
   </div>
 </template>
 <script>
-import index from "./components/index/index.vue";
-
 export default {
-  components: {
-    index
-  }
+  components: {}
 };
 </script>
 <style lang="less" scoped>
-
 </style>

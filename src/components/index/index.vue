@@ -2,26 +2,34 @@
   <div>
     <div class="nav-nav-right">
       <ul>
-        <li @click.prevent="jumpTo(item.toID)" v-for="(item, index) in navList" :key="index">
+        <li
+          @click.prevent="jumpTo(item.toID)"
+          v-for="(item, index) in newNavList"
+          :key="item.name"
+          class="nav-li"
+          draggable="true"
+          @dragstart="dragstart(index,$event)"
+          @dragend="dragend($event)"
+          @drop="drop(index,$event)"
+          @dragover="dragover($event)"
+        >
           <a href>{{item.name}}</a>
         </li>
         <li class="Totop" @click="jumpTo('biliHeader')">
           <span class="fa fa-angle-up"></span>
           <span></span>
           <span></span>
-        </li>
+        </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
       </ul>
+      <input type="hidden" name v-model="flag">
     </div>
     <biliHeader id="biliHeader"></biliHeader>
     <navMenu></navMenu>
     <chiefRecommend id="chiefRecommend"></chiefRecommend>
-    <popularize id="popularize"></popularize>
-    <adveritseOne></adveritseOne>
-    <Donghua id="Donghua"></Donghua>
-    <adveritseTwo></adveritseTwo>
-    <bangumi id="bangumi"></bangumi>
-    <guochuang id="guochuang"></guochuang>
-    <music></music>
+
+    <component v-for="item in newNavList" :key="item.name" :is="item.component" :id="item.toID"></component>
+
+    <div class="placeholder"></div>
   </div>
 </template>
 <script>
@@ -53,26 +61,31 @@ export default {
     return {
       Stimer: "",
       navList: [
-        { name: "动画", toID: "Donghua" },
-        { name: "番剧", toID: "bangumi" },
-        { name: "国创", toID: "guochuang" },
-        { name: "直播", toID: "" },
-        { name: "数码", toID: "" },
-        { name: "音乐", toID: "" },
-        { name: "娱乐", toID: "" },
-        { name: "游戏", toID: "" },
-        { name: "生活", toID: "" },
-        { name: "鬼畜", toID: "" },
-        { name: "时尚", toID: "" },
-        { name: "广告", toID: "" },
-        { name: "影视", toID: "" },
-        { name: "科技", toID: "" },
-        { name: "舞蹈", toID: "" },
-        { name: "专栏", toID: "" },
-        { name: "TV剧", toID: "" },
-        { name: "纪录片", toID: "" }
+        { index: "0", name: "动画", toID: "Donghua", component: "Donghua" },
+        { index: "1", name: "番剧", toID: "bangumi", component: "bangumi" },
+        { index: "2", name: "国创", toID: "guochuang", component: "guochuang" },
+        { index: "3", name: "直播", toID: "" },
+        { index: "4", name: "数码", toID: "" },
+        { index: "5", name: "音乐", toID: "music", component: "music" },
+        { index: "6", name: "娱乐", toID: "", component: "" },
+        { index: "7", name: "游戏", toID: "" },
+        { index: "8", name: "生活", toID: "" },
+        { index: "9", name: "鬼畜", toID: "" },
+        { index: "10", name: "时尚", toID: "" },
+        { index: "11", name: "广告", toID: "" },
+        { index: "12", name: "影视", toID: "" },
+        { index: "13", name: "科技", toID: "" },
+        { index: "14", name: "舞蹈", toID: "" },
+        { index: "15", name: "专栏", toID: "" },
+        { index: "16", name: "TV剧", toID: "" },
+        { index: "17", name: "纪录片", toID: "" }
       ],
-      top: null
+      newNavList: [],
+      top: null,
+      dragging: null,
+      moveIndex: null,
+      targetIndex: null,
+      flag: 1
     };
   },
   methods: {
@@ -88,33 +101,69 @@ export default {
       } else {
         oNavRight.style.top = 250 + "px";
       }
-      if (this.top > 300 && this.top < 850) {
-        navLi[0].classList.add("hightLight");
-      } else {
-        navLi[0].classList.remove("hightLight");
-      }
-      if (this.top > 850 && this.top < 1500) {
-        navLi[1].classList.add("hightLight");
-      } else {
-        navLi[1].classList.remove("hightLight");
-      }
-      if (this.top > 1500 && this.top < 1900) {
-        navLi[2].classList.add("hightLight");
-      } else {
-        navLi[2].classList.remove("hightLight");
-      }
-      console.log(this.top);
     },
     jumpTo(toID) {
       document.querySelector("#" + toID).scrollIntoView(true);
-    }
+    },
+    dragstart: function(index) {
+      var that = this;
+      //console.log("拖放开始", index);
+      //记录下当前拖动的元素索引
+      that.moveIndex = index;
+    },
+    dragover: function(event) {
+      //必须添加dragover事件，不然drop事件也无效
+      event.preventDefault();
+    },
+    dragend: function(event) {
+      /* 结束位置元素 */
+      // console.log("拖放结束", event.currentTarget);
+    },
+    drop: function(index, event) {
+      var that = this;
+      //阻止默认行为;
+      event.preventDefault();
+      //阻止默认行为;
+      event.stopPropagation();
+      //console.log("拖放到目标", index);
+      /* 记录下目标位置索引 */
+      that.targetIndex = index;
+
+      //先保存拖动元素index
+      var temp = that.newNavList[that.moveIndex];
+      //将拖动元素位置index换成目标元素的index
+      that.newNavList[that.moveIndex] = that.newNavList[that.targetIndex];
+      //将目标元素位置index换成拖动元素的index
+      that.newNavList[that.targetIndex] = temp;
+      /* 将 navList更新到NewNavLIst 中 */
+      that.change();
+      //console.log(JSON.stringify(that.newNavList));
+    },
+    tran() {
+      for (var i = 0; i < this.navList.length; i++) {
+        /* 新数组的第i个元素为 旧数组的 index为i 的对象
+          第0个对象 为 旧数组中index=0的对象
+        */
+        this.newNavList[i] = this.navList.find(v => v.index == i);
+      }
+    },
+    change() {
+      /* 用来刷新页面 */
+      this.flag = this.flag + 1;
+}
   },
   mounted() {
     window.addEventListener("scroll", this.shouScroll);
+  },
+  created() {
+    this.tran();
   }
 };
 </script>
 <style lang="less" scoped>
+.placeholder {
+  height: 4000px;
+}
 .nav-nav-right {
   width: 60px;
 
@@ -124,6 +173,7 @@ export default {
   margin-left: 1360px;
   border-radius: 5px;
   top: 250px;
+
   ul {
     padding: 0;
     margin: 0;
@@ -135,6 +185,7 @@ export default {
       text-align: center;
       line-height: 30px;
       font-size: 12px;
+      position: relative;
     }
     .Totop {
       width: 100%;

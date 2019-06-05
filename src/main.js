@@ -1,11 +1,20 @@
 /* 入口js */
 
 import Vue from "vue";
-import "../lib/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css";
+/* 引入element包 */
+import ElementUI from '../node_modules/element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI)
+
+/* 引入bootstrap包 */
+import "bootstrap/dist/css/bootstrap.css";
+/* 引入字体图标 */
 import "font-awesome/css/font-awesome.css";
+/* 引入mui */
 import MintUI from "mint-ui";
 Vue.use(MintUI);
 import "mint-ui/lib/style.css";
+
 import app from "../src/app.vue"
 
 /* 1.1导入路由的包 */
@@ -18,6 +27,8 @@ import router from './router.js'
 /* 动态修改标题 */
 import VueWechatTitle from 'vue-wechat-title';
 Vue.use(VueWechatTitle)
+
+
 
 new Vue({
   el: "#app",
